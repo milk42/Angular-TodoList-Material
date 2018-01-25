@@ -1,0 +1,81 @@
+<!--Ajout d'un switch pour afficher le texte correspondant au titre dans le menu qui se trouve dans le header-->
+<ng-container [ngSwitch]="appService.selectedMenu">
+<section *ngSwitchCase="'home'">
+  <h1>Home</h1>
+<p>
+    Hinc ille commotus ut iniusta perferens et indigna praefecti
+     custodiam protectoribus mandaverat fidis. quo conperto Montius 
+     tunc quaestor acer quidem sed ad lenitatem propensior, consulens 
+     in commune advocatos palatinarum primos scholarum adlocutus est mollius 
+     docens nec decere haec fieri nec prodesse addensque vocis obiurgatorio 
+     sonu quod si id placeret, post statuas Constantii deiectas super adimenda 
+     vita praefecto conveniet securius cogitari.
+</p>
+</section>
+
+<section *ngSwitchCase="'skills'">
+    <h1>Skills</h1>
+  <p>
+      Hinc ille commotus ut iniusta perferens et indigna praefecti
+       custodiam protectoribus mandaverat fidis. quo conperto Montius 
+       tunc quaestor acer quidem sed ad lenitatem propensior, consulens 
+       in commune advocatos palatinarum primos scholarum adlocutus est mollius 
+       docens nec decere haec fieri nec prodesse addensque vocis obiurgatorio 
+       sonu quod si id placeret, post statuas Constantii deiectas super adimenda 
+       vita praefecto conveniet securius cogitari.
+  </p>
+  </section>
+
+  <section *ngSwitchCase="'xp'">
+      <h1>Experience</h1>
+    <p>
+        Hinc ille commotus ut iniusta perferens et indigna praefecti
+         custodiam protectoribus mandaverat fidis. quo conperto Montius 
+         tunc quaestor acer quidem sed ad lenitatem propensior, consulens 
+         in commune advocatos palatinarum primos scholarum adlocutus est mollius 
+         docens nec decere haec fieri nec prodesse addensque vocis obiurgatorio 
+         sonu quod si id placeret, post statuas Constantii deiectas super adimenda 
+         vita praefecto conveniet securius cogitari.
+    </p>
+    </section>
+
+    <section *ngSwitchCase="'contact'">
+        <h1>Contact</h1>
+      <p>
+          Hinc ille commotus ut iniusta perferens et indigna praefecti
+           custodiam protectoribus mandaverat fidis. quo conperto Montius 
+           tunc quaestor acer quidem sed ad lenitatem propensior, consulens 
+           in commune advocatos palatinarum primos scholarum adlocutus est mollius 
+           docens nec decere haec fieri nec prodesse addensque vocis obiurgatorio 
+           sonu quod si id placeret, post statuas Constantii deiectas super adimenda 
+           vita praefecto conveniet securius cogitari.
+      </p>
+      </section>
+
+      <section *ngSwitchCase="'todo'">
+        <h1>ToDoList</h1>
+        <app-add></app-add>
+        <app-liste></app-liste>
+      </section>
+
+      <section *ngSwitchCase="'legal'">
+          <h1>Legal notice</h1>
+        <p>
+            Sed quid est quod in hac causa maxime homines admirentur et reprehendant meum consilium, cum ego idem antea multa decreverim, que magis ad hominis dignitatem quam ad rei publicae necessitatem pertinerent? Supplicationem quindecim dierum decrevi sententia mea. Rei publicae satis erat tot dierum quot C. Mario ; dis immortalibus non erat exigua eadem gratulatio quae ex maximis bellis. Ergo ille cumulus dierum hominis est dignitati tributus.
+        </p>
+        </section>
+
+        <section *ngSwitchCase="'credit'">
+            <h1>Credits</h1>
+          <p>
+              Sed quid est quod in hac causa maxime homines admirentur et reprehendant meum consilium, cum ego idem antea multa decreverim, que magis ad hominis dignitatem quam ad rei publicae necessitatem pertinerent? Supplicationem quindecim dierum decrevi sententia mea. Rei publicae satis erat tot dierum quot C. Mario ; dis immortalibus non erat exigua eadem gratulatio quae ex maximis bellis. Ergo ille cumulus dierum hominis est dignitati tributus.
+          </p>
+          </section>
+
+        </ng-container>
+      
+        
+        
+        
+    
+  

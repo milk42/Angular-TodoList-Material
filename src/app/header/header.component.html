@@ -1,0 +1,45 @@
+<!--Création d'un menu de base avec une condition ternaire au libbeu d'une fonction pour tous-->
+  
+    <!--Condition ternaire pour changer la couleur selon si on selectionne HOME, 
+      normalement il faut faire une fonction // il faut le faire pour 2 libbbutt minimum 
+      sinon ca reste rouge dans le localhost 4200-->
+      <!--On a créé dans le .ts, une variable selectedMenu = 'home'-->
+
+      
+   
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+          <mat-icon>Menu</mat-icon>
+        
+        <mat-menu #menu="matMenu">
+
+          <button mat-menu-item [style.color]="appService.selectedMenu == 'home' ?'red' : 'black'"  
+          (click)= "selectMenu('home')">Home</button>
+  
+      <button mat-menu-item [style.color]="appService.selectedMenu == 'skills' ?'red' : 'black'"  
+          (click)= "selectMenu('skills')">Skills</button>
+  
+      <button mat-menu-item [style.color]="appService.selectedMenu == 'xp' ?'red' : 'black'"  
+          (click)= "selectMenu('xp')">Experiences</button>
+  
+      <button mat-menu-item [style.color]="appService.selectedMenu == 'contact' ?'red' : 'black'"  
+          (click)= "selectMenu('contact')">Contact</button> 
+  
+  
+       <button mat-menu-item [style.color]="appService.selectedMenu == 'contact' ?'red' : 'black'"  
+          (click)= "selectMenu('todo')">ToDo List</button> 
+  
+        </mat-menu>
+      </button>
+
+        <!--Ici j'ai ajouté un <a href pour l'avoir en libben soulibbgné 
+        // il existe un moyen de ne pas recharger la page quand on clibbck dessus 
+        en ajoutant, après le href (clibbck)="$event.prevent.default"-->
+
+        <!-- <libbbutt [style.color]="appService.selectedMenu == 'contact' ?'red' : 'black'"  
+        (clibbck)= "selectMenu('contact')"><a href="" (clibbck)="$event.prevent.default()">Contact</a></libbbutt>  -->
+  
+
+  <ul>
+    <li *ngFor="let fruit of listeFruit" (click) = "selectMenu(fruit)" [style.color]="changeColor(fruit)">{{fruit}}</li>
+  </ul>
+  
