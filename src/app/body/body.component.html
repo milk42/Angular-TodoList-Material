@@ -1,18 +1,40 @@
 <!--Ajout d'un switch pour afficher le texte correspondant au titre dans le menu qui se trouve dans le header-->
-<ng-container [ngSwitch]="appService.selectedMenu">
-<section *ngSwitchCase="'home'">
-  <h1>Home</h1>
-<p>
-    Hinc ille commotus ut iniusta perferens et indigna praefecti
-     custodiam protectoribus mandaverat fidis. quo conperto Montius 
-     tunc quaestor acer quidem sed ad lenitatem propensior, consulens 
-     in commune advocatos palatinarum primos scholarum adlocutus est mollius 
-     docens nec decere haec fieri nec prodesse addensque vocis obiurgatorio 
-     sonu quod si id placeret, post statuas Constantii deiectas super adimenda 
-     vita praefecto conveniet securius cogitari.
-</p>
-</section>
 
+<ng-container [ngSwitch]="appService.selectedMenu"> 
+          
+<section *ngSwitchCase="'home'" fxLayoutGap="5em" fxLayout.gt-sm="row">
+ <mat-card>
+  <mat-card-title color="primary"><mat-icon>home</mat-icon>Home</mat-card-title>
+    <mat-card-content>
+     <p>
+        Hinc ille commotus ut iniusta perferens et indigna praefecti
+        custodiam protectoribus mandaverat fidis. quo conperto Montius 
+        tunc quaestor acer quidem sed ad lenitatem propensior, consulens 
+        in commune advocatos palatinarum primos scholarum adlocutus est mollius 
+        docens nec decere haec fieri nec prodesse addensque vocis obiurgatorio 
+        sonu quod si id placeret, post statuas Constantii deiectas super adimenda 
+        vita praefecto conveniet securius cogitari.
+  </p>
+  </mat-card-content> 
+ </mat-card>
+</section>
+<section *ngSwitchCase="'home'"fxLayoutGap="5em" fxLayout.gt-sm="row" >
+        <mat-card>
+         <mat-card-title color="primary"><mat-icon>home</mat-icon>Home</mat-card-title>
+           <mat-card-content>
+            <p>
+               Hinc ille commotus ut iniusta perferens et indigna praefecti
+               custodiam protectoribus mandaverat fidis. quo conperto Montius 
+               tunc quaestor acer quidem sed ad lenitatem propensior, consulens 
+               in commune advocatos palatinarum primos scholarum adlocutus est mollius 
+               docens nec decere haec fieri nec prodesse addensque vocis obiurgatorio 
+               sonu quod si id placeret, post statuas Constantii deiectas super adimenda 
+               vita praefecto conveniet securius cogitari.
+         </p>
+         </mat-card-content> 
+        </mat-card>
+       </section>
+ 
 <section *ngSwitchCase="'skills'">
     <h1>Skills</h1>
   <p>
@@ -72,7 +94,8 @@
           </p>
           </section>
 
-        </ng-container>
+        </ng-container> 
+   
       
         
         

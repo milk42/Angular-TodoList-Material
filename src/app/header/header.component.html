@@ -5,41 +5,57 @@
       sinon ca reste rouge dans le localhost 4200-->
       <!--On a créé dans le .ts, une variable selectedMenu = 'home'-->
 
-      
-   
-      <button mat-icon-button [matMenuTriggerFor]="menu">
-          <mat-icon>Menu</mat-icon>
+      <!-- si je mets mat-icon-button , le cadre sera rond -->
         
+       <mat-toolbar role="header" color="primary" fxLayoutAlign="space-between center"> 
+         
+         
+         <button mat-icon-button [matMenuTriggerFor]="menu">  
+            <mat-icon>view_headline</mat-icon> 
+           </button>
+
+           <h1>MON SITE</h1>
+
+
+           <button mat-icon-button [matMenuTriggerFor]="menu">  
+              <mat-icon>view_headline</mat-icon> 
+             </button>
+        </mat-toolbar>
+      
+    
         <mat-menu #menu="matMenu">
 
           <button mat-menu-item [style.color]="appService.selectedMenu == 'home' ?'red' : 'black'"  
-          (click)= "selectMenu('home')">Home</button>
+          (click)= "selectMenu('home')"><mat-icon>home</mat-icon>Home</button>
   
-      <button mat-menu-item [style.color]="appService.selectedMenu == 'skills' ?'red' : 'black'"  
-          (click)= "selectMenu('skills')">Skills</button>
+          <button mat-menu-item [style.color]="appService.selectedMenu == 'skills' ?'red' : 'black'"  
+          (click)= "selectMenu('skills')"><mat-icon>vertical_align_top</mat-icon>Skills</button>
+
+         
+          <button  mat-menu-item [matMenuTriggerFor]="experience" mat-menu-item [style.color]="appService.selectedMenu == 'xp' ?'red' : 'black'"  
+          (click)= "selectMenu('xp')"><mat-icon>usb</mat-icon>Experiences</button>
+          
+
+          <button mat-menu-item [style.color]="appService.selectedMenu == 'contact' ?'red' : 'black'"  
+          (click)= "selectMenu('contact')"><mat-icon>perm_contact_calendar</mat-icon>Contact</button> 
   
-      <button mat-menu-item [style.color]="appService.selectedMenu == 'xp' ?'red' : 'black'"  
-          (click)= "selectMenu('xp')">Experiences</button>
   
-      <button mat-menu-item [style.color]="appService.selectedMenu == 'contact' ?'red' : 'black'"  
-          (click)= "selectMenu('contact')">Contact</button> 
-  
-  
-       <button mat-menu-item [style.color]="appService.selectedMenu == 'contact' ?'red' : 'black'"  
-          (click)= "selectMenu('todo')">ToDo List</button> 
+          <button mat-menu-item [style.color]="appService.selectedMenu == 'contact' ?'red' : 'black'"  
+          (click)= "selectMenu('todo')"><mat-icon>playlist_add_check</mat-icon>ToDo List</button> 
   
         </mat-menu>
-      </button>
+     
 
-        <!--Ici j'ai ajouté un <a href pour l'avoir en libben soulibbgné 
-        // il existe un moyen de ne pas recharger la page quand on clibbck dessus 
-        en ajoutant, après le href (clibbck)="$event.prevent.default"-->
+        <!--Ici j'ai ajouté un <a href pour l'avoir en lien souligné 
+        // il existe un moyen de ne pas recharger la page quand on click dessus 
+        en ajoutant, après le href (click)="$event.prevent.default"-->
 
-        <!-- <libbbutt [style.color]="appService.selectedMenu == 'contact' ?'red' : 'black'"  
-        (clibbck)= "selectMenu('contact')"><a href="" (clibbck)="$event.prevent.default()">Contact</a></libbbutt>  -->
+        <!-- <li [style.color]="appService.selectedMenu == 'contact' ?'red' : 'black'"  
+        (click)= "selectMenu('contact')"><a href="" (click)="$event.prevent.default()">Contact</a></li>  -->
   
 
-  <ul>
-    <li *ngFor="let fruit of listeFruit" (click) = "selectMenu(fruit)" [style.color]="changeColor(fruit)">{{fruit}}</li>
-  </ul>
+    <mat-menu #experience="matMenu">
+    <button *ngFor="let fruit of listeFruit" (click) = "selectMenu(fruit)" [style.color]="changeColor(fruit)">{{fruit}}</button>
+    </mat-menu>
+  
   

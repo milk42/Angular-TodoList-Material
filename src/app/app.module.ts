@@ -15,6 +15,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [  // ajouter les composants
@@ -32,7 +34,9 @@ import {MatIconModule} from '@angular/material/icon';
     MatButtonModule,
     MatCheckboxModule,
     MatMenuModule,
-    MatIconModule
+    MatIconModule,
+    MatToolbarModule,
+    MatCardModule
   ],
   providers: [AppService, TodoService], // ajouter les services
   bootstrap: [AppComponent]
